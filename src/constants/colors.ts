@@ -1,0 +1,6 @@
+export const MAIN_COLOR = "#160934"
+export const SECONDARY_COLOR = "#8b8499"
+export const VIOLET_COLOR = "#5825d4"
+export const PINK_COLOR = "#8a67e9"
+export const GRAY_COLOR = "#f0f1f3"
+export const WHITE_COLOR = "#fff"
