@@ -1,15 +1,15 @@
 import { Section } from "./style"
 
-interface IPaddingWrapperProps {
+interface ISectionWrapperProps {
   children: React.ReactNode
   padding?: [number, number]
 }
 
-const PaddingWrapper: React.FC<IPaddingWrapperProps> = ({
+const SectionWrapper: React.FC<ISectionWrapperProps> = ({
   children,
   padding = [80, 0],
 }) => {
   return <Section padding={padding}>{children}</Section>
 }
 
-export { PaddingWrapper }
+export { SectionWrapper }

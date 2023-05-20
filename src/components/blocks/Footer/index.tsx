@@ -6,7 +6,7 @@ import {
   Box,
 } from "@mui/material"
 import { FooterWrapper } from "./style"
-import { PaddingWrapper } from "components/ui"
+import { SectionWrapper } from "components/ui"
 import Image from "next/image"
 import Link from "next/link"
 import { WHITE_COLOR } from "constants/colors"
@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
   return (
     <FooterWrapper>
       <Container>
-        <PaddingWrapper>
+        <SectionWrapper>
           <Stack
             direction="row"
             justifyContent="space-between"
@@ -86,7 +86,7 @@ const Footer: React.FC = () => {
               </MuiLink>
             </Link>
           </Stack>
-        </PaddingWrapper>
+        </SectionWrapper>
       </Container>
     </FooterWrapper>
   )

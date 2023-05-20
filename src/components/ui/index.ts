@@ -1,1 +1,2 @@
-export { PaddingWrapper } from "./PaddingWrapper"
+export { SectionWrapper } from "./SectionWrapper"
+export { SectionTitle } from "./SectionTitle"
