@@ -112,6 +112,14 @@ const theme = createTheme({
         },
       },
     },
+    MuiAccordion: {
+      styleOverrides: {
+        root: {
+          padding: "20px 0",
+          boxShadow: "none",
+        },
+      },
+    },
   },
 })
 
