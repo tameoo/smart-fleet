@@ -2,7 +2,7 @@ import { Benefits } from "./Benefits"
 import { Contact } from "./Contact"
 import { Maps } from "./Maps"
 import { FAQ } from "./FAQ"
-import { WorkProcess } from "./WorkProcess/inde"
+import { WorkProcess } from "./WorkProcess"
 import { Details } from "./Details"
 
 const MainPage: React.FC = () => {
