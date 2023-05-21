@@ -9,6 +9,7 @@ import {
   GRAY_COLOR,
   MAIN_COLOR,
   PINK_COLOR,
+  SECONDARY_COLOR,
   VIOLET_COLOR,
   WHITE_COLOR,
 } from "constants/colors"
@@ -117,6 +118,19 @@ const theme = createTheme({
         root: {
           padding: "20px 0",
           boxShadow: "none",
+        },
+      },
+    },
+    MuiTab: {
+      styleOverrides: {
+        root: {
+          color: SECONDARY_COLOR,
+          padding: "16px 12px",
+          "&.Mui-selected": {
+            backgroundColor: "#EEE8FC",
+            color: VIOLET_COLOR,
+            borderRadius: "10px",
+          },
         },
       },
     },
