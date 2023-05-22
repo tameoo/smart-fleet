@@ -1,14 +1,18 @@
 import { Benefits } from "./Benefits"
 import { Contact } from "./Contact"
-import { Maps } from "./Maps"
-import { FAQ } from "./FAQ"
-import { WorkProcess } from "./WorkProcess"
 import { Details } from "./Details"
+import { FAQ } from "./FAQ"
+import { Intro } from "./Intro"
+import { Management } from "./Management"
+import { Maps } from "./Maps"
+import { WorkProcess } from "./WorkProcess"
 
 const MainPage: React.FC = () => {
   return (
     <>
+      <Intro />
       <Details />
+      <Management />
       <Contact variant="upper" />
       <WorkProcess />
       <Benefits />
