@@ -1,4 +1,5 @@
 export const details = [
+  // TODO: responsive width
   {
     icon: "lightning",
     title: "№1",

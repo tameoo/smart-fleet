@@ -18,15 +18,27 @@ const WorkProcessCard: React.FC<IWorkProcessCardProps> = ({
   return (
     <WorkProcessCardWrapper type={type}>
       {step ? (
-        <Typography variant="h5" marginBottom={2} fontWeight={700}>
+        <Typography
+          variant="h5"
+          marginBottom={3}
+          fontWeight={700}
+          fontSize={{ xs: "24px", sm: "32px" }}
+        >
           {step}
         </Typography>
       ) : null}
-      <Typography variant="h6" marginBottom={1}>
+      <Typography
+        variant="h6"
+        marginBottom={2}
+        lineHeight="120%"
+        fontSize={{ xs: "20px", sm: "28px" }}
+      >
         {title}
       </Typography>
       <Typography
         variant="body1"
+        fontSize={{ xs: "15px", sm: "24px" }}
+        lineHeight="120%"
         color={type === "company" ? SECONDARY_COLOR : undefined}
       >
         {text}

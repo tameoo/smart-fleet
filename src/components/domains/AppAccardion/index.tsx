@@ -55,12 +55,20 @@ const AppAccordion: React.FC<IAppAccordionProps> = ({ dataSource }) => {
               )
             }
           >
-            <Typography variant="h5" color={MAIN_COLOR}>
+            <Typography
+              variant="h5"
+              color={MAIN_COLOR}
+              fontSize={{ xs: "20px", sm: "28px" }}
+            >
               {question}
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography variant="body1" color={SECONDARY_COLOR}>
+            <Typography
+              variant="body1"
+              color={SECONDARY_COLOR}
+              fontSize={{ xs: "18px" }}
+            >
               {answer}
             </Typography>
           </AccordionDetails>

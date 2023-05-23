@@ -6,7 +6,7 @@ export const Section = styled.section<{ padding: [number, number] }>`
     return `${vertical}px ${horizontal}px`
   }};
 
-  @media (max-width: 560px) {
+  @media (max-width: 786px) {
     padding: 40px 0;
   }
 `

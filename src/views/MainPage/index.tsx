@@ -1,3 +1,4 @@
+import { Advantages } from "./Advantages"
 import { Benefits } from "./Benefits"
 import { Contact } from "./Contact"
 import { Details } from "./Details"
@@ -12,7 +13,8 @@ const MainPage: React.FC = () => {
     <>
       <Intro />
       <Details />
-      <Management />
+      {/* <Management /> */}
+      <Advantages />
       <Contact variant="upper" />
       <WorkProcess />
       <Benefits />

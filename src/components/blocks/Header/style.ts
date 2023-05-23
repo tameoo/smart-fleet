@@ -12,4 +12,8 @@ export const HeaderNav = styled.nav`
       color: ${MAIN_COLOR};
     }
   }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `

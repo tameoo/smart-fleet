@@ -20,16 +20,15 @@ const Header: React.FC = () => {
               height={40}
             />
             <HeaderNav>
-              {/* TODO: add links */}
               <Stack direction="row" gap={5} component="ul">
                 <li>
-                  <Link href="/">Преимущества</Link>
+                  <Link href="#advantages">Преимущества</Link>
                 </li>
                 <li>
-                  <Link href="/">Процессы работ</Link>
+                  <Link href="#workprocess">Процессы работ</Link>
                 </li>
                 <li>
-                  <Link href="/">Контакты</Link>
+                  <Link href="#contacts">Контакты</Link>
                 </li>
               </Stack>
             </HeaderNav>

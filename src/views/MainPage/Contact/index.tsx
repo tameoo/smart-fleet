@@ -1,5 +1,5 @@
 import { Box, Button, Container, Stack, Typography } from "@mui/material"
-import { SectionWrapper } from "components/ui"
+import { SectionTitle, SectionWrapper } from "components/ui"
 import { ContactWrapper } from "./style"
 import { WHITE_COLOR } from "constants/colors"
 
@@ -11,20 +11,19 @@ const Contact: React.FC<IContactProps> = ({ variant }) => {
   return (
     <SectionWrapper padding={[40, 0]}>
       <Container maxWidth="lg">
-        <ContactWrapper>
+        <ContactWrapper id="contacts">
           {variant === "lower" ? (
             <Box textAlign="center">
-              <Typography
-                variant="h4"
-                marginBottom={5}
-                color={WHITE_COLOR}
-                fontWeight={500}
-              >
+              <SectionTitle color={WHITE_COLOR}>
                 Упрощаем процесс работы автопарка <br /> с помощью цифровизацию
-              </Typography>
+              </SectionTitle>
 
-              {/* TODO: add link */}
-              <Button variant="violet" href="">
+              <Button
+                variant="violet"
+                href="https://wa.me/+77753220767"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Оставить заявку
               </Button>
             </Box>
@@ -34,15 +33,10 @@ const Contact: React.FC<IContactProps> = ({ variant }) => {
               justifyContent="space-between"
               alignItems="center"
             >
-              <Box>
-                <Typography
-                  variant="h4"
-                  marginBottom={1}
-                  color={WHITE_COLOR}
-                  fontWeight={500}
-                >
+              <Box width="50%">
+                <SectionTitle color={WHITE_COLOR} marginBottom={1}>
                   Оставьте контакты
-                </Typography>
+                </SectionTitle>
 
                 <Typography variant="h6" color={WHITE_COLOR} fontWeight={400}>
                   Обсудим специфику вашего автопарка и <br /> подберем
@@ -50,9 +44,16 @@ const Contact: React.FC<IContactProps> = ({ variant }) => {
                 </Typography>
               </Box>
 
-              {/* TODO: add link */}
-              <Box width="30%">
-                <Button variant="violet" href="" fullWidth>
+              <Box width="50%" textAlign="center">
+                <Button
+                  variant="violet"
+                  href="https://wa.me/+77753220767"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{
+                    width: "60%",
+                  }}
+                >
                   Оставить заявку
                 </Button>
               </Box>

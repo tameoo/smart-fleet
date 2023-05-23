@@ -23,6 +23,9 @@ type TIntroSlide = {
     content: string
     style?: React.CSSProperties
   }
+  imageWrapper: {
+    style: React.CSSProperties
+  }
   wrapperStyle: React.CSSProperties
 }
 
@@ -45,7 +48,10 @@ export const slidesContent: TIntroSlide[] = [
       },
     },
     image: {
-      content: "/assets/images/intro.png",
+      content: "/assets/images/intro-project.png",
+    },
+    imageWrapper: {
+      style: { marginTop: "60px" },
     },
     wrapperStyle: {
       backgroundColor: PINK_COLOR,
@@ -69,7 +75,10 @@ export const slidesContent: TIntroSlide[] = [
       },
     },
     image: {
-      content: "/assets/images/intro.png",
+      content: "/assets/images/intro-project.png",
+    },
+    imageWrapper: {
+      style: { marginTop: "100px" },
     },
     wrapperStyle: {
       backgroundColor: MAIN_COLOR,

@@ -11,7 +11,7 @@ const Benefits: React.FC = () => {
 
         <Grid container spacing="20px">
           {benefits.map((item, idx) => (
-            <Grid key={idx} item xs={12} sm={6}>
+            <Grid key={idx} item xs={12} md={6}>
               <BenefitCard {...item} />
             </Grid>
           ))}

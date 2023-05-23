@@ -7,35 +7,35 @@ interface IManagementCardProps {
   title: string
   subtitle: string
   image: string
-  paddingBottom?: number
-  imageHeight?: number
+  imageWrapper: React.CSSProperties
 }
 
 const ManagementCard: React.FC<IManagementCardProps> = ({
   title,
   subtitle,
   image,
-  paddingBottom,
-  imageHeight = 250,
+  imageWrapper,
 }) => {
   return (
-    <ManagementCardWrapper paddingBottom={paddingBottom}>
-      <Box marginBottom={3}>
-        <Typography variant="h5" marginBottom={2} color={MAIN_COLOR}>
-          {title}
-        </Typography>
-        <Typography variant="body1" color={SECONDARY_COLOR}>
-          {subtitle}
-        </Typography>
-      </Box>
+    <ManagementCardWrapper>
+      <Typography
+        variant="h5"
+        marginBottom={2}
+        color={MAIN_COLOR}
+        fontSize={{ xs: "20px", sm: "28px" }}
+      >
+        {title}
+      </Typography>
+      <Typography
+        variant="body1"
+        color={SECONDARY_COLOR}
+        fontSize={{ xs: "15px", sm: "18px" }}
+      >
+        {subtitle}
+      </Typography>
 
-      <ManagementCardImage imageHeight={imageHeight}>
-        <Image
-          src={image}
-          alt="Картинка преимущества"
-          fill
-          sizes="(min-width: 768px) 33vw,(min-width: 1024px) 50vw, 100vw"
-        />
+      <ManagementCardImage style={{ ...imageWrapper }}>
+        <Image src={image} alt="Картинка преимущества" fill />
       </ManagementCardImage>
     </ManagementCardWrapper>
   )

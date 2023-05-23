@@ -74,14 +74,19 @@ const Management: React.FC = () => {
             Доведите работу вашего автопарка до идеала <br /> вместе с Smart
             Fleet!
           </SectionTitle>
-          <Typography variant="h6" color={SECONDARY_COLOR} marginBottom={5}>
+          <Typography
+            variant="h6"
+            color={SECONDARY_COLOR}
+            marginBottom={5}
+            fontSize={{ xs: "15px", sm: "24px", md: "28px" }}
+          >
             Наша IT платформа позволяет:
           </Typography>
 
           <AppSlider
             settings={sliderSettings}
             slides={management.map((item, idx) => (
-              <Box key={idx} padding="10px">
+              <Box key={idx}>
                 <ManagementCard {...item} />
               </Box>
             ))}

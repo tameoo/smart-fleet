@@ -17,9 +17,9 @@ const Footer: React.FC = () => {
       <Container>
         <SectionWrapper>
           <Stack
-            direction="row"
+            direction={{ sm: "column", md: "row" }}
             justifyContent="space-between"
-            alignItems="center"
+            alignItems={{ sm: "flex-start", md: "center" }}
             gap={3}
             marginBottom={10}
           >
@@ -43,10 +43,10 @@ const Footer: React.FC = () => {
                 д.7/7 офис 105
               </Typography>
 
-              <Link href="tel: + 7 707 456 7812" passHref legacyBehavior>
+              <Link href="tel: +7 775 322 0767" passHref legacyBehavior>
                 <MuiLink color={WHITE_COLOR} underline="none">
                   <Typography variant="body1" fontSize={18}>
-                    + 7 707 456 78 12
+                    +7 775 322 0767
                   </Typography>
                 </MuiLink>
               </Link>
@@ -70,7 +70,7 @@ const Footer: React.FC = () => {
             </Typography>
 
             {/* TODO: add links */}
-            <Link href="/" passHref legacyBehavior>
+            {/* <Link href="/" passHref legacyBehavior>
               <MuiLink color={WHITE_COLOR}>
                 <Typography variant="body1" fontSize={18}>
                   Политика конфеденциальности
@@ -84,7 +84,7 @@ const Footer: React.FC = () => {
                   Публичная оферта
                 </Typography>
               </MuiLink>
-            </Link>
+            </Link> */}
           </Stack>
         </SectionWrapper>
       </Container>

@@ -1,9 +1,4 @@
-import {
-  createTheme,
-  darken,
-  lighten,
-  responsiveFontSizes,
-} from "@mui/material/styles"
+import { createTheme, darken, lighten } from "@mui/material/styles"
 import { BORDER_RADIUS_BUTTON } from "constants/borders"
 import {
   GRAY_COLOR,
@@ -22,6 +17,8 @@ declare module "@mui/material/Button" {
   }
 }
 
+const defaultTheme = createTheme({})
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -37,6 +34,15 @@ const theme = createTheme({
     },
   },
   components: {
+    MuiContainer: {
+      styleOverrides: {
+        maxWidthLg: {
+          [defaultTheme.breakpoints.up("lg")]: {
+            maxWidth: 1360,
+          },
+        },
+      },
+    },
     MuiTypography: {
       styleOverrides: {
         h1: {
@@ -137,4 +143,4 @@ const theme = createTheme({
   },
 })
 
-export default responsiveFontSizes(theme)
+export default theme

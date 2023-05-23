@@ -58,39 +58,68 @@ const NextArrow: React.FC<CustomArrowProps> = ({ onClick }) => (
 )
 
 const Intro: React.FC = () => {
-  // TODO: image quality
   const renderSlides = slidesContent.map(
-    ({ id, title, subtitle, image, button, wrapperStyle }) => (
-      <Box key={id} padding="10px">
+    ({ id, title, subtitle, image, imageWrapper, button, wrapperStyle }) => (
+      <Box
+        key={id}
+        padding="10px"
+        height={{ sm: "580px", md: "660px", lg: "700px" }}
+      >
         <IntroWrapper style={{ ...wrapperStyle }}>
-          <Typography
-            variant="h4"
-            component="h1"
-            marginBottom={3}
-            style={{ ...title.style }}
-            dangerouslySetInnerHTML={{ __html: title.content }}
-          />
+          <Box>
+            <Typography
+              variant="h4"
+              fontSize={{ sm: "24px", md: "32px", lg: "44px" }}
+              component="h1"
+              marginBottom={3}
+              style={{ ...title.style }}
+              dangerouslySetInnerHTML={{ __html: title.content }}
+            />
 
-          <Typography
-            variant="body2"
-            marginBottom={4}
-            style={{ ...subtitle.style }}
-            dangerouslySetInnerHTML={{ __html: subtitle.content }}
-          />
+            <Typography
+              variant="body2"
+              marginBottom={4}
+              fontSize={{ sm: "18px", lg: "24px" }}
+              style={{ ...subtitle.style }}
+              dangerouslySetInnerHTML={{ __html: subtitle.content }}
+            />
 
-          <Box marginBottom={5}>
-            <Button variant="contained" style={{ ...button.style }}>
-              {button.content}
-            </Button>
+            <Box>
+              <Button variant="contained" style={{ ...button.style }}>
+                {button.content}
+              </Button>
+            </Box>
           </Box>
 
-          <Box flex={1} height="100%" position="relative">
+          <Box position="relative" className="img-xl">
             <Image
-              src={image.content}
-              style={{ objectFit: "contain", ...image.style }}
+              src="/assets/images/intro-project.png"
+              style={{ objectFit: "contain" }}
               alt="Фоновая картика"
-              fill
-              sizes="(min-width: 768px) 33vw,(min-width: 1024px) 50vw, 100vw"
+              width={1100}
+              height={200}
+              priority
+            />
+          </Box>
+
+          <Box position="relative" className="img-lg">
+            <Image
+              src="/assets/images/intro-project-md.png"
+              style={{ objectFit: "contain" }}
+              alt="Фоновая картика"
+              width={784}
+              height={220}
+              priority
+            />
+          </Box>
+
+          <Box position="relative" className="img-md">
+            <Image
+              src="/assets/images/intro-project-md.png"
+              style={{ objectFit: "contain" }}
+              alt="Фоновая картика"
+              width={580}
+              height={200}
               priority
             />
           </Box>

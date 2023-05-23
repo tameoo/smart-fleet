@@ -7,31 +7,25 @@ export const WorkProcessWrapper = styled.div`
   background-color: ${GRAY_COLOR};
   border-radius: ${BORDER_RADIUS};
 
-  .client-steps {
-    &:before {
-      background-color: ${GREEN_COLOR};
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr;
     }
   }
 
-  .company-steps {
-    &:before {
-      background-color: ${MAIN_COLOR};
-    }
-  }
+  .grid-inner-container {
+    display: grid;
+    grid-template-rows: 320px;
+    grid-auto-rows: 350px;
+    gap: 20px;
 
-  .client-steps,
-  .company-steps {
-    position: relative;
-
-    &:before {
-      content: "";
-      position: absolute;
-      width: 8px;
-      height: 8px;
-      border-radius: 100%;
-      top: 50%;
-      transform: translateY(-50%);
-      left: -15px;
+    @media (max-width: 1024px) {
+      grid-template-rows: 1fr;
+      grid-auto-rows: 1fr;
     }
   }
 `
